@@ -43,30 +43,3 @@ public class BookingSystem implements BookingSystemInterface {
     }
     
 
-//public class FeedFactory implements FeedFactoryInterface {
-//
-//    @Override
-//    public FeedInterface createFeed(BufferedReader in) throws IOException {
-//        String title = in.readLine();
-//        String content = "";
-//        
-//        FeedInterface feed = new Feed();
-//        
-//        while(title != null){
-//            //System.out.println(title);
-//            content = in.readLine();
-//            //System.out.println(content);
-//            
-//            FeedItem item = new FeedItem(title, content);
-//            feed.addItem(item);
-//            
-//            title = in.readLine();
-//        }
-//
-//        
-//        return feed;
-//    }
-//    
-//    
-//    
-//}
