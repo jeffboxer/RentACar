@@ -10,15 +10,33 @@ package ooc.yoursolution;
  */
 public class CarAtt {
     
-    String carMake;
-    int carPrice;
-    int carQt;
+    public final String carMake;
+    public final int carPrice;
+    public final int carQt;
 
     public CarAtt(String carMake, int carPrice, int carQt) {
         this.carMake = carMake;
         this.carPrice = carPrice;
         this.carQt = carQt;
     }
+
+    public String getCarMake() {
+        return carMake;
+    }
+
+ 
+
+    public int getCarPrice() {
+        return carPrice;
+    }
+
+
+
+    public int getCarQt() {
+        return carQt;
+    }
+
+
 
     @Override
     public String toString() {
