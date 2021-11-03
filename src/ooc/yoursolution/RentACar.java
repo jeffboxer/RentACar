@@ -44,7 +44,7 @@ public class RentACar implements RentACarInterface {
     public void setName(String name) {
         this.name = name;
     }
-
+//this method checks the car's availability
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
         for (CarInterface car : rentACar) {
@@ -56,7 +56,7 @@ public class RentACar implements RentACarInterface {
         }
         return false;
     }
-
+//looping trough the available cars to pass the information to the user
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
         for (CarInterface car : rentACar) {
@@ -67,7 +67,7 @@ public class RentACar implements RentACarInterface {
         return 0;
 
     }
-
+//when a car is being booked, the program will execute this piece of code and take one car from the list
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
         int bookACar = getCarAvailable(month, day, make, lengthOfRent);
@@ -81,7 +81,7 @@ public class RentACar implements RentACarInterface {
         }
         return false;
     }
-
+//get how many cars are avaible
     @Override
     public int getNumberOfCars() {
         return rentACar.size();
