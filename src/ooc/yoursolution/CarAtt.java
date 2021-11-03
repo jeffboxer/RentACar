@@ -10,7 +10,6 @@ package ooc.yoursolution;
  */
 public class CarAtt {
 
-    public final String carMake;
     public final int carPrice;
     public final int carQt;
 
@@ -20,6 +19,8 @@ public class CarAtt {
         this.carQt = carQt;
     }
 
+    
+    //getters
     public String getCarMake() {
         return carMake;
     }
