@@ -17,17 +17,19 @@ public class Car implements CarInterface {
     int id;
     Make make;
     double rate;
+    Map<Month, boolean[]> availability;
     
     public Car(int id, Make make, int rate){
         this.id = id;
         this.make = make;
         this.rate = rate;
+        this.availability = createAvailability();   
     }
     
 
     @Override
     public Map<Month, boolean[]> createAvailability() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return availability;
     }
 
     @Override
@@ -67,12 +69,14 @@ public class Car implements CarInterface {
 
     @Override
     public boolean isAvailable(Month month, int day) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+return false;
+       
     }
 
     @Override
     public boolean book(Month month, int day) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
     
 }
