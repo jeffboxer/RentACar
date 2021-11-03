@@ -12,6 +12,7 @@ public class CarAtt {
 
     public final int carPrice;
     public final int carQt;
+    private final String carMake;
 
     public CarAtt(String carMake, int carPrice, int carQt) {
         this.carMake = carMake;
