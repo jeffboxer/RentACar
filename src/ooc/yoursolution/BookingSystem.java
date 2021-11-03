@@ -15,31 +15,26 @@ public class BookingSystem implements BookingSystemInterface {
 
     @Override
     public RentACarInterface setupRentACar(BufferedReader in) throws IOException {
-        
+
         RentACarInterface rentacar = new RentACar();
-        
-            in.readLine();
-            String text=in.readLine();
-            String[] carSplit;   
-            
-             do {
-                 
 
+        in.readLine();
+        String text = in.readLine();
+        String[] carSplit;
 
-                
-                carSplit = text.split(":");
-               
-                CarAtt car = new CarAtt(carSplit[0],Integer.parseInt(carSplit[1]),Integer.parseInt(carSplit[2]));
-                rentacar.getCars();
-                text = in.readLine();
-                
-                
-             } while (text!=null);
-             
-            return rentacar;
-        }
-       
-        
+        do {
+
+            carSplit = text.split(":");
+
+            CarAtt car = new CarAtt(carSplit[0], Integer.parseInt(carSplit[1]), Integer.parseInt(carSplit[2]));
+            rentacar.getCars();
+            text = in.readLine();
+
+        } while (text != null);
+
+        return rentacar;
     }
+
+}
     
 

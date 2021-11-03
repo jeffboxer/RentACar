@@ -9,7 +9,7 @@ package ooc.yoursolution;
  * @author Jefferson
  */
 public class CarAtt {
-    
+
     public final String carMake;
     public final int carPrice;
     public final int carQt;
