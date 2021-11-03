@@ -24,23 +24,17 @@ public class CarAtt {
         return carMake;
     }
 
- 
-
     public int getCarPrice() {
         return carPrice;
     }
-
-
 
     public int getCarQt() {
         return carQt;
     }
 
-
-
     @Override
     public String toString() {
         return "CarAtt{" + "carMake=" + carMake + ", carPrice=" + carPrice + ", carQt=" + carQt + '}';
     }
-    
+
 }

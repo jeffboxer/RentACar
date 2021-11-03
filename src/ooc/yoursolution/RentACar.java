@@ -16,34 +16,43 @@ import ooc.enums.Month;
 
 public class RentACar implements RentACarInterface {
     
-    public String name;
-    private List<CarAtt> rentacar;
+    ArrayList<CarAtt> RentACar;
     
-    
-     
-    public RentACar(String dlrName, List<CarAtt> newCars){
-        this.name = dlrName;
-        this.rentacar = newCars;
-    
+     public RentACar(){
+        RentACar = new ArrayList<>();
     }
+     
+     
+ 
 
-    RentACar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  
+      @Override
+    public CarAtt getItem(String title) {
+        for(CarAtt item : RentACar){
+            
+                return item;      
+        }
+        return null;
     }
     
    @Override
-    public List<CarInterface> getCars() {
-        return this.rentacar;
+    public List<CarAtt> getCars() {
+        
+         for(CarAtt item : RentACar){
+            
+                return item;      
+        }
+        return null;
     }
 
     @Override
     public void setCars(List<CarInterface> cars) {
-        this.rentacar.addAll(rentacar);    
+        this.RentACar.addAll(RentACar);    
     }
 
     @Override
     public String getName() {
-       return this.name;
+       return this.RentACar;
     }
 
     @Override
@@ -65,7 +74,7 @@ public class RentACar implements RentACarInterface {
 
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
-    for (CarInterface car : cars) {
+    for (CarInterface car : RentACar) {
             if (car.getMake().equals(make)) {
                 return car.getId();
             }
@@ -81,7 +90,7 @@ public class RentACar implements RentACarInterface {
 
     @Override
     public int getNumberOfCars() {
-       return rentacar.size();
+       return RentACar.size();
     }
     
 }
