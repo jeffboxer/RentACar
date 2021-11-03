@@ -16,12 +16,16 @@ import ooc.enums.Month;
 
 public class RentACar implements RentACarInterface {
     
-    List<CarInterface> rentACar;
+    List<CarInterface> rentACar; 
     String name;
     
      public RentACar(List<CarInterface> cars, String name){
-        this.rentACar = cars;
+        this.rentACar = cars; 
         this.name = name;
+    }
+
+    RentACar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
 

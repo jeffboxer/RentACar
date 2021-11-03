@@ -10,6 +10,10 @@ package ooc.yoursolution;
  */
 public class CarAtt {
     
+    // constructor for Cars
+    
+    // With this constructor I get the attributes of the cars given in the file
+    
     public final String carMake;
     public final int carPrice;
     public final int carQt;
@@ -20,6 +24,8 @@ public class CarAtt {
         this.carQt = carQt;
     }
 
+    
+    //getters
     public String getCarMake() {
         return carMake;
     }
