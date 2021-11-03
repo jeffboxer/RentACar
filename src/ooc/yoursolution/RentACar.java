@@ -16,43 +16,28 @@ import ooc.enums.Month;
 
 public class RentACar implements RentACarInterface {
     
-    ArrayList<CarAtt> RentACar;
+    List<CarInterface> rentACar;
+    String name;
     
-     public RentACar(){
-        RentACar = new ArrayList<>();
+     public RentACar(List<CarInterface> cars, String name){
+        this.rentACar = cars;
+        this.name = name;
     }
      
-     
- 
 
-  
-      @Override
-    public CarAtt getItem(String title) {
-        for(CarAtt item : RentACar){
-            
-                return item;      
-        }
-        return null;
-    }
-    
    @Override
-    public List<CarAtt> getCars() {
+    public List<CarInterface> getCars() {
         
-         for(CarAtt item : RentACar){
-            
-                return item;      
-        }
-        return null;
+        return this.rentACar;
     }
-
     @Override
     public void setCars(List<CarInterface> cars) {
-        this.RentACar.addAll(RentACar);    
+        this.rentACar = cars;
     }
 
     @Override
     public String getName() {
-       return this.RentACar;
+        return this.name;
     }
 
     @Override
@@ -60,9 +45,10 @@ public class RentACar implements RentACarInterface {
         this.name = name;
     }
 
+    
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
-        for (CarInterface car : cars) {
+        for (CarInterface car : rentACar) {
             if (car.getMake().equals(make)) {
                 if (car.isAvailable(month, day)){
                     return true;
@@ -74,7 +60,7 @@ public class RentACar implements RentACarInterface {
 
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
-    for (CarInterface car : RentACar) {
+    for (CarInterface car : rentACar) {
             if (car.getMake().equals(make)) {
                 return car.getId();
             }
@@ -90,7 +76,7 @@ public class RentACar implements RentACarInterface {
 
     @Override
     public int getNumberOfCars() {
-       return RentACar.size();
+       return rentACar.size();
     }
     
 }
